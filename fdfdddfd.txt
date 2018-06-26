@@ -1,0 +1,45 @@
+Levantamento de Requisitos
+
+RF01 - O sistema deve mater o cadastro de clientes(usuarios)
+
+RF02 - O sistema deve manter de produtos 
+
+
+
+create table produto (
+	id integer not null,
+	descricao varchar(50) not null,
+	preco numeric(9,2),
+	foto text,
+	tamanho char,
+	
+	constraint "pk_produto" primary key (id)
+	
+)
+
+
+
+create table cliente (
+	id integer not null,
+	nome varchar(50) not null,
+	cartao bigint,
+	endereco varchar(60),
+	end_entrega varchar(60),
+	
+	constraint "pk_cliente" primary key (id)
+	
+)
+
+
+
+
+{this.state.listaItens.map(function(item)  
+                  {
+                     return (
+                         <tr>
+                             <td>{item.Nome}</td>
+                             <td>{item.CpfCnpj}</td>
+                         </tr>
+                     )
+                  }
+               }
